@@ -1,0 +1,39 @@
+
+<h2>Car Selection Form</h2>
+<form method="post">
+    <label for="car-type">Car Type:</label>
+    <select id="car-type" name="car-type">
+        <option value="">Select a car type</option>
+        <option value="sport">Sport</option>
+        <option value="suv">SUV</option>
+        <option value="van">Van</option>
+    </select>
+    <br><br>
+
+    <label for="car-brand">Car Brand:</label>
+    <select id="car-brand" name="car-brand">
+        <option value="">Select a car brand</option>
+        <option value="toyota">Toyota</option>
+        <option value="ford">Ford</option>
+        <option value="bmw">BMW</option>
+        <option value="chevrolet">Chevrolet</option>
+
+    </select>
+    <br><br>
+
+    <label for="production-year">Production Year:</label>
+    <select id="production-year" name="production-year">
+        <option value=""></option>
+        <script>
+            const startYear = 2000;
+            const endYear = new Date().getFullYear();
+            for (let year = startYear; year <= endYear; year++) {
+                document.write('<option value="' + year + '">' + year + '</option>');
+            }
+        </script>
+    </select>
+    <br><br>
+
+    <button type="submit">Submit</button>
+</form>
+
